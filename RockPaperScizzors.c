@@ -24,9 +24,8 @@ int main(){
     }
 
     printf("\n\n\t\tEnter s(Stone), p(Paper), z(Scizzors)\n\n\t\t");
-    scanf("%c",pla);
+    scanf("%c",&pla);
     result=game(pla,comp);
-    printf("%c",result);
     //Result of the game
     if (result=='d'){
         printf("\n\n\t\tGame Draw!!!");
@@ -37,6 +36,7 @@ int main(){
     else{
         printf("\n\n\t\tCongrats You Won the Game!!");
     }
+    printf("\n\n\t\tYour Choice: %c Computers Choice: %c",pla ,comp);
     return 0;
 }
 
