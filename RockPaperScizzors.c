@@ -22,8 +22,10 @@ int main(){
     else{
         comp='z';//Scizzors for greater than 66
     }
+    printf("/n/n/t/tWelcome to the Game!!");
 
     printf("\n\n\t\tEnter s(Stone), p(Paper), z(Scizzors)\n\n\t\t");
+    printf("Enter Your choice:");
     scanf("%c",&pla);
     result=game(pla,comp);
     //Result of the game
