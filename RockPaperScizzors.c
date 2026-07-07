@@ -7,7 +7,7 @@ char game(char pla,char comp);
 
 int main(){
     int n;
-    char pla ,comp ,result;
+    char pla ,comp ,result ,ch;
     //Gets Random Number
     srand(time(NULL));
     //To make Number less than 100
@@ -22,23 +22,29 @@ int main(){
     else{
         comp='z';//Scizzors for greater than 66
     }
-    printf("/n/n/t/tWelcome to the Game!!");
+    printf("\n\n\t\tWelcome to the Game!!");
+    ch='y';;
 
-    printf("\n\n\t\tEnter s(Stone), p(Paper), z(Scizzors)\n\n\t\t");
-    printf("Enter Your choice:");
-    scanf("%c",&pla);
-    result=game(pla,comp);
-    //Result of the game
-    if (result=='d'){
-        printf("\n\n\t\tGame Draw!!!");
+    while(ch=='y' || ch=='Y'){
+      printf("\n\n\t\tEnter s(Stone), p(Paper), z(Scizzors)\n\n\t\t");
+      printf("Enter Your choice:");
+      scanf(" %c",&pla);
+      result=game(pla,comp);
+      //Result of the game
+      if (result=='d'){
+          printf("\n\n\t\tGame Draw!!!");
+      }
+      else if(result=='c'){
+          printf("\n\n\t\tComputer Wins!! Better Luck next Time");
+      }
+      else{
+          printf("\n\n\t\tCongrats You Won the Game!!");
+      }
+      printf("\n\n\t\tYour Choice: %c Computers Choice: %c",pla ,comp);
+      printf("\n\n\t\tDo You Wish to continue the game(Y/N):");
+      scanf(" %c",&ch);
     }
-    else if(result=='c'){
-        printf("\n\n\t\tComputer Wins!! Better Luck next Time");
-    }
-    else{
-        printf("\n\n\t\tCongrats You Won the Game!!");
-    }
-    printf("\n\n\t\tYour Choice: %c Computers Choice: %c",pla ,comp);
+    printf("\n\t\tByee!!!");
     return 0;
 }
 
